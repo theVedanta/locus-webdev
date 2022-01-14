@@ -7,19 +7,27 @@
     display: flex;
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
     justify-content: center;
     align-items: center;
 }
-.sq {
-    background: #f3ac3c;
-    width: 1400px;
-    height: 1400px;
-    transform: rotate(45deg);
-}
 .c {
     background: #0b2429;
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
     border-radius: 50%;
     z-index: 10;
+}
+.corner {
+    right: var(--rt);
+    top: var(--t);
+    bottom: var(--b);
+    left: var(--l);
+    width: 0;
+    height: 0;
+    border-bottom: 250px solid #0b2429;
+    border-top: 250px solid transparent;
+    border-left: 250px solid transparent;
+    border-right: 250px solid transparent;
+    transform: rotate(var(--r)) translate(0%, -72%);
 }
